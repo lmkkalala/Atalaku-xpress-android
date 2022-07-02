@@ -1,0 +1,7 @@
+{
+  "name": "AndroidPOSAtalakuxpress",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

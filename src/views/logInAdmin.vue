@@ -38,6 +38,7 @@
 </template>
 
 <script lang="ts">
+import router from '@/router';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar ,IonFooter, IonCard, IonItem, IonInput, IonButton} from '@ionic/vue';
 import { defineComponent } from 'vue';
 
@@ -68,8 +69,9 @@ export default defineComponent({
             this.username = '';
             this.password = '';
             this.message = 'Connexion avec success';
-            setTimeout(function(){
-                window.location.href = 'config';
+            setTimeout(() => {
+                //window.location.href = 'config';
+                router.push('config');
             },3000);
        } else{
            this.message = 'Echec Connexion';

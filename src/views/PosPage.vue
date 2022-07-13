@@ -48,6 +48,7 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar ,IonFooter, IonCard, IonItem, IonInput, IonLabel, IonButton, IonIcon} from '@ionic/vue';
 import { defineComponent } from 'vue';
 import { lockOpen, lockClosed, bus} from 'ionicons/icons';
+import { assertExpressionStatement } from '@babel/types';
 
 export default defineComponent({
   name: 'PosPage',
@@ -62,6 +63,9 @@ export default defineComponent({
       html:'',
       session:'',
       color: 'green',
+      form: {
+
+      }
     }
   },
   components: {
@@ -103,7 +107,13 @@ export default defineComponent({
     },
     modifyPrice: function(){
       console.log("Modify Price");
-    }
+    },
+    // send: function(){
+    //   axios.post('https://atalakuxpress.io/',this.form).then(function(response){
+
+    //   }.bind(this));
+    // }
+
   },
   mounted() {
     this.session = '1234';

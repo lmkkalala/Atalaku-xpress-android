@@ -10,6 +10,7 @@
 </template>
 
 <script lang="ts">
+import router from '@/router';
 import { IonContent, IonPage} from '@ionic/vue';
 import { defineComponent  } from 'vue';
 
@@ -21,8 +22,9 @@ export default defineComponent({
   },
   methods:{
     redirect: function(location = ''){
-      setTimeout(function(){  
-        window.location.href = location;
+      setTimeout(() => {  
+        //window.location.href = location;
+        router.push(location);
       }, 3000); 
     }
   },

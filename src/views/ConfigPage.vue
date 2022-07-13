@@ -51,6 +51,7 @@
 </template>
 
 <script lang="ts">
+import router from '@/router';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonItem,IonInput, IonSelect
 , IonSelectOption, IonButton, IonCard, IonLabel, IonCardContent, IonPopover} from '@ionic/vue';
 import { defineComponent } from 'vue';
@@ -85,9 +86,10 @@ export default defineComponent({
   },
   methods: {
     redirect: function(location = ''){
-      setTimeout(function(){  
-        window.location.href = location;
-      }, 3000);
+      setTimeout(() => {  
+        //window.location.href = location;
+        router.push(location);
+      }, 3000); 
     },
     addConfig: function(){
       const conf = localStorage.getItem('adminConfig');
